@@ -11,8 +11,8 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 
-@EnableKafka
-@Configuration
+//@EnableKafka
+//@Configuration
 public class ConsumerConfig {
 
 	@Autowired
@@ -25,7 +25,7 @@ public class ConsumerConfig {
 		return cconfig;
 	}
 
-	@Bean
+	//@Bean
 	public ConcurrentKafkaListenerContainerFactory<String, String> kafkaListenerContainerFactory() {
 		ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
 		factory.setConsumerFactory(new DefaultKafkaConsumerFactory<>(setupProducerConfig()));

@@ -18,6 +18,7 @@ public class ProducerServiceImpl implements ProducerService {
 	
 	@Override
 	public void send(String message) {
+		System.out.println(message);
 		template.send(topic,message);
 	}
 	
